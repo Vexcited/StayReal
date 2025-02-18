@@ -15,15 +15,25 @@ const routes = [
     component: SplashView
   },
   {
-    path: "/feed",
-    component: lazy(() => import("~/layouts/feed")),
+    path: "/app",
+    component: lazy(() => import("~/layouts/app")),
     children: [
       {
-        path: "/friends",
-        component: lazy(() => import("~/views/feed/friends"))
+        path: "/today",
+        component: lazy(() => import("~/views/app/today")),
       }
     ]
   },
+  // {
+  //   path: "/feed",
+  //   component: lazy(() => import("~/layouts/feed")),
+  //   children: [
+  //     {
+  //       path: "/friends",
+  //       component: lazy(() => import("~/views/feed/friends"))
+  //     }
+  //   ]
+  // },
   {
     path: "/login",
     component: lazy(() => import("~/views/login"))
